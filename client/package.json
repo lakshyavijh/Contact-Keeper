@@ -35,5 +35,9 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  },
   "proxy": "http://localhost:5000"
+
 }
