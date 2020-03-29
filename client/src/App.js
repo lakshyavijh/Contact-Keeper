@@ -5,10 +5,14 @@ import About from './components/pages/About';
 import Developer from './components/pages/Developer';
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
 import Navbar from './components/layout/Navbar';
-import ContactState from './context/contact/ContextState';
+import ContactState from './context/contact/ContactState';
+import AuthState from './context/auth/AuthState';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 
 const  App=() => {
   return (
+    <AuthState>
     <ContactState>
     <Router>
     <Fragment>
@@ -18,11 +22,14 @@ const  App=() => {
           <Route exact path ='/' component={Home} />
           <Route exact path ='/about' component={About} />
           <Route exact path ='/developer' component={Developer} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/login' component={Login} />
         </Switch>
       </div>
       </Fragment>
     </Router>
     </ContactState>
+    </AuthState>
   );
 }
 

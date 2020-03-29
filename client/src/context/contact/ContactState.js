@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import axios from 'axios';
-
+import uuid from 'uuid/v4'
 import ContactContext from './contactContext';
 import contactReducer from './contactReducer';
 import {
@@ -50,7 +50,7 @@ const ContactState = props => {
     //add contacts
     const addContact = async contact => {
 
-      contact.id =4;
+      contact.id =uuid.v4();
       
       dispatch({
         type: ADD_CONTACT,
