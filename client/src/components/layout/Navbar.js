@@ -30,6 +30,9 @@ const Navbar = ({ title, icon }) => {
           <span className='hide-sm'>Logout</span>
         </a>
       </li>
+      <li>
+        <Link to='/developer'>Developer</Link>
+      </li>
     </Fragment>
   );
 
@@ -40,6 +43,9 @@ const Navbar = ({ title, icon }) => {
       </li>
       <li>
         <Link to='/login'>Login</Link>
+      </li>
+      <li>
+        <Link to='/developer'>Developer</Link>
       </li>
     </Fragment>
   );
